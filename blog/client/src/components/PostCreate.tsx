@@ -17,6 +17,7 @@ export const PostCreate = () => {
       });
       if (response.status === 201) {
         setPost("");
+        location.reload();
         console.log(response.data);
       } else {
         throw new Error("Error sending data");
@@ -26,7 +27,7 @@ export const PostCreate = () => {
     }
   };
 
-  //   sending data
+  //sending data
 
   return (
     <div className=" w-[80vw] md:w-[70vw]">
@@ -43,7 +44,7 @@ export const PostCreate = () => {
           type="submit"
           className="bg-green-600 text-gray-100 h-8 rounded-sm"
         >
-          Submit {post}
+          Submit
         </button>
       </form>
     </div>
